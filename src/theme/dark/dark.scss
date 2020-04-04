@@ -1,0 +1,21 @@
+@import "../colors/colors";
+$buttonDefault: #e0e0e0;
+$text: rgba(255, 255, 255, 0.87);
+$body: #121212;
+$paper: #1d1d1d;
+
+$buttonText: rgba(0, 0, 0, 0.87);
+
+.theme-dark {
+
+  body{
+    background-color: $body;
+    color: $text;
+  }
+
+  //button
+  @import "elements/button/button";
+
+  //card
+  @import "elements/card/card";
+}
