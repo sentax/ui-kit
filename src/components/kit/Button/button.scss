@@ -1,0 +1,51 @@
+//$primary-color: themed('primary');
+.s3-btn-base {
+  color: inherit;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  display: inline-flex;
+  padding: 0;
+  position: relative;
+  align-items: center;
+  user-select: none;
+
+  border-radius: 0;
+  vertical-align: middle;
+  -moz-appearance: none;
+  justify-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+
+  outline: none;
+
+  &::-moz-focus-inner {
+    border-style: none;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+.s3-btn-root {
+  padding: 6px 16px;
+  font-size: 0.875rem;
+  min-width: 64px;
+  box-sizing: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  border-radius: 4px;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+
+
+  &.outlined {
+    border: 1px solid;
+  }
+}
