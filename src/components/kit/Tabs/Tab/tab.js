@@ -26,4 +26,5 @@ class Tab extends React.Component {
   }
 }
 
+
 export default Tab;
