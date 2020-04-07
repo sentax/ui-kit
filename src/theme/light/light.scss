@@ -1,20 +1,17 @@
 @import "../colors/colors";
-
 $buttonDefault: #e0e0e0;
 $text: rgba(0, 0, 0, 0.87);
 $body: #d6d6d6;
 $paper: #fff;
-
 .theme-light {
-
-  body {
-    background-color: $body;
-    color: $text;
-  }
-
-  //button
-  @import "../light/elements/button/button";
-
-  //card
-  @import "../light/elements/card/card";
+    body {
+        background-color: $body;
+        color: $text;
+    }
+    //button
+    @import "../light/elements/button/button";
+    //card
+    @import "../light/elements/card/card";
+    //Tab
+    @import "../light/elements/tab/";
 }
