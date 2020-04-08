@@ -11,6 +11,7 @@
   user-select: none;
 
   border-radius: 0;
+  white-space: nowrap;
   vertical-align: middle;
   -moz-appearance: none;
   justify-content: center;
@@ -21,6 +22,7 @@
 
   outline: none;
 
+  overflow: hidden;
   &::-moz-focus-inner {
     border-style: none;
   }
@@ -44,8 +46,31 @@
   letter-spacing: 0.02857em;
   text-transform: uppercase;
 
-
   &.outlined {
     border: 1px solid;
+  }
+}
+.ripple-container{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  span {
+    transform: scale(0);
+    border-radius: 100%;
+    position: absolute;
+    opacity: 0.75;
+    background-color: #8c8c8c;
+    animation-name: ripple;
+    animation-duration: 850ms;
+  }
+
+  @keyframes ripple {
+    to {
+      opacity: 0;
+      transform: scale(2);
+    }
   }
 }
