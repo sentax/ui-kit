@@ -1,6 +1,7 @@
 import React from "react";
 import Buttons from "./buttons";
 import TabsEx from "./tabsEx";
+import Inputs from "./inputs";
 
 const Examples = () => {
   return (
@@ -8,6 +9,8 @@ const Examples = () => {
       <Buttons />
 
       <TabsEx />
+
+      <Inputs />
     </div>
   );
 };

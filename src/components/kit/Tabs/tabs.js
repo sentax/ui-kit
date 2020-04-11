@@ -30,7 +30,7 @@ class Tabs extends React.Component {
               <Tab
                 label={child.props.label}
                 key={child.props.label}
-                activeTab={this.state.activeTab}
+                activetab={this.state.activeTab}
                 onClick={this.onClickTabItem}
               />
             );
@@ -47,6 +47,5 @@ class Tabs extends React.Component {
     );
   }
 }
-
 
 export default Tabs;
