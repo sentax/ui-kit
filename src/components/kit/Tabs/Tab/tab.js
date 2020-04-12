@@ -1,29 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Button from "../../Button/button";
 
-class Tab extends React.Component {
-  static propTypes = {
-    activeTab: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired,
+const Tab = (props) => {
+  const onClick = () => {
+    props.onClick(props.label);
   };
 
-  onClick = () => {
-    this.props.onClick(this.props.label);
-  };
+  return (
+    <Button
+      className={`s3-tab-list-item ${
+        props.activetab === props.label ? ` active` : ``
+      }`}
+      onClick={onClick}
+      style={{ borderRadius: "0" }}
+    >
+      {props.label}
+    </Button>
+  );
+};
 
-  render() {
-    return (
-      <div
-        className={`s3-tab-list-item ripple ${
-          this.props.activeTab === this.props.label ? ` active` : ``
-        }`}
-        onClick={this.onClick}
-      >
-        {this.props.label}
-      </div>
-    );
-  }
-}
+Tab.propTypes = {
+  activetab: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
 
 export default Tab;
