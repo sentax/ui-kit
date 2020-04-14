@@ -10,16 +10,18 @@ $gray: #9b9b9b;
 }
 
 .s3-input-field {
+    direction: rtl;
     font-family: inherit;
     width: 100%;
+    font-size: 1.3rem;
+    color: #000;
+    padding: 7px 10px;
+    border-radius: 0;
+    background: transparent;
     border: 0;
     border-bottom: 2px solid $gray;
     outline: 0;
-    font-size: 1.3rem;
-    color: #000;
-    padding: 7px 0;
-    background: transparent;
-    transition: border-color 0.2s;
+    transition: border-radius 0.2s, border-color 0.2s;
     &::placeholder {
         color: transparent;
     }
@@ -28,15 +30,41 @@ $gray: #9b9b9b;
         cursor: text;
         top: 20px;
     }
+    &.outlined {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
 }
 
 .s3-input-label {
+    top: 8px;
     position: absolute;
-    top: 0;
+    right: -19px;
     display: block;
     transition: 0.2s;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: $gray;
+    background: #fff;
+    padding: 0 4px;
+}
+
+.s3-input-field.outlined:focus {
+    ~.s3-input-label {
+        position: absolute;
+        top: 8px;
+        right: -8px;
+        display: block;
+        transition: 0.2s;
+        font-size: 0.8rem;
+        color: $primary;
+        font-weight: 100;
+        background: #fff;
+        padding: 0 2px;
+    }
+    padding-bottom: 7px;
+    font-weight: 700;
+    border: 2px solid $primary;
+    border-radius: 5px;
 }
 
 .s3-input-field:focus {
@@ -61,4 +89,30 @@ $gray: #9b9b9b;
     &:invalid {
         box-shadow: none;
     }
+}
+
+.eye {
+    top: 30px;
+    left: 8px;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border: solid 1px transparent;
+    border-radius: 75% 15%;
+    position: absolute;
+    transform: rotate(45deg);
+    background: rgba(0, 0, 0, .42)
+}
+
+.eye:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border: solid 1px #fff;
+    border-radius: 50%;
+    left: 3px;
+    top: 3px;
+    background: rgba(0, 0, 0, .12);
 }
